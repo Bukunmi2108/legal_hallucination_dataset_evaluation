@@ -47,6 +47,15 @@ class BenchmarkItem(BaseModel):
     prompt_language: PromptLanguage
 
 
+class LLMResponse(BaseModel):
+    """Phase 3 output — raw LLM response before verification."""
+
+    benchmark_item_id: str
+    model_id: str
+    llm_response: str
+    output_language: str  # "en" or "ar"
+
+
 class EvaluationResult(BaseModel):
     """Output dataset schema — populated after LLM evaluation."""
 
