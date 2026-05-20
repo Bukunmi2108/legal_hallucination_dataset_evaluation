@@ -9,9 +9,6 @@ build/
 # Environment
 .env
 
-# Data artifacts
-data/output/*.csv
-data/output/*.json
 
 # IDE
 .vscode/

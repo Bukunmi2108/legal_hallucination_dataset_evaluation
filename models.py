@@ -57,7 +57,7 @@ class LLMResponse(BaseModel):
 
 
 class EvaluationResult(BaseModel):
-    """Output dataset schema — populated after LLM evaluation."""
+    """Output dataset schema — populated after citation extraction + judging."""
 
     benchmark_item_id: str
     model_id: str
@@ -65,3 +65,4 @@ class EvaluationResult(BaseModel):
     output_language: str
     extracted_citations: list[str]
     category: ResponseCategory
+    judge_reasoning: str
